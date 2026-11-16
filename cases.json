@@ -1,0 +1,16 @@
+{
+  "k": 3,
+  "gates": {"min_recall_at_k": 1.0, "min_mrr": 0.9},
+  "docs": {
+    "d1": "refund policy: full refund within 30 days of delivery, no questions asked",
+    "d2": "shipping times: standard delivery is 5 to 7 business days across india",
+    "d3": "warranty: all electronics carry a one year manufacturer warranty",
+    "d4": "partial refunds apply when items are returned after 30 days with a restocking fee",
+    "d5": "express shipping delivers in 2 business days for an extra charge"
+  },
+  "cases": [
+    {"id": "refund-window", "query": "how long do I have to return something for a full refund", "relevant": ["d1"], "also_ok": ["d4"]},
+    {"id": "fast-delivery", "query": "fastest way to get my order delivered", "relevant": ["d5"], "also_ok": ["d2"]},
+    {"id": "restocking", "query": "is there a fee for returning an item late", "relevant": ["d4"], "also_ok": []}
+  ]
+}
